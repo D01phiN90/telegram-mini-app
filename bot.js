@@ -3,7 +3,8 @@ const TelegramBot = require("node-telegram-bot-api");
 
 const TOKEN = "8125574694:AAEz7mJJGmeUVPLQn31ZOkUZQutEJhLqB5g";
 const PORT = process.env.PORT || 3000;
-const URL = "https://telegram-mini-a0u2dzl1k-denis-projects-257bc1bf.vercel.app";
+const URL = "https://telegram-mini-app-eta-rose.vercel.app/";
+
 
 const app = express();
 
