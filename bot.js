@@ -3,18 +3,17 @@ const TelegramBot = require("node-telegram-bot-api");
 
 const TOKEN = "8125574694:AAEz7mJJGmeUVPLQn31ZOkUZQutEJhLqB5g";
 const PORT = process.env.PORT || 3000;
-const URL = "https://telegram-mini-app-eta-rose.vercel.app/";
-
+const URL = "https://telegram-mini-app-eta-rose.vercel.app"; // Production URL от Vercel
 
 const app = express();
 
 // Создаём бота без polling
 const bot = new TelegramBot(TOKEN);
-bot.setWebHook(`${URL}/bot${TOKEN}`);
+bot.setWebHook(`${URL}/api/webhook`); // путь webhook должен совпадать с серверной частью
 
 // Middleware для получения обновлений
 app.use(express.json());
-app.post(`/bot${TOKEN}`, (req, res) => {
+app.post(`/api/webhook`, (req, res) => {
   bot.processUpdate(req.body);
   res.sendStatus(200);
 });
