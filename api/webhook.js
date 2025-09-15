@@ -15,7 +15,7 @@ bot.start((ctx) => {
     Markup.inlineKeyboard([
       Markup.button.webApp(
         "Играть 🎮",
-        "https://D01phiN90.github.io/telegram-mini-app"
+        "https://telegram-mini-app-eta-rose.vercel.app"
       ),
     ])
   );
